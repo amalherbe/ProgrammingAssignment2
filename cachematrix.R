@@ -47,7 +47,7 @@ cacheSolve <- function(x, ...) {
   }
   #if not, set it, cache it and return result
   data<-x$get()
-  s<-solve(data) %*% data
+  s<-solve(data,...) 
   x$setinverse(s)
   s
   
